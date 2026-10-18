@@ -1,0 +1,24 @@
+# MerlinGuard GUI palette and teleport options
+gui:
+  title: "MerlinGuard Teleport"
+  theme: "blue-light-blue"
+  show-vanished-players: false
+teleport:
+  warmup-seconds: 3
+  cancel-on-move: true
+  request-expiry-seconds: 60
+  cooldown-seconds: 5
+waypoints:
+  max-per-player: 20
+anti-cheat:
+  # Server-side reach checks cannot reliably identify Freecam itself.
+  block-interaction-max-distance: 7.0
+  reach-strikes-before-kick: 3
+  reach-strike-window-seconds: 20
+  kick-reason: "Unzulässige Interaktionsreichweite (MerlinGuard)"
+  # Ore ratios are only weak indicators. Keep auto-kick disabled to avoid false positives.
+  xray-suspicion-log: true
+  xray-auto-kick: false
+performance:
+  warn-below-tps: 18.0
+  warning-interval-seconds: 60

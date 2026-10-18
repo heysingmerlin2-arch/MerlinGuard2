@@ -1,0 +1,40 @@
+name: MerlinGuard
+version: 1.0.0
+main: de.merlin.merlinguard.MerlinGuard
+api-version: '26.3'
+author: Merlin
+description: TPA, waypoints, performance monitoring and basic server-side cheat heuristics.
+commands:
+  tpa:
+    description: Request to teleport to a player
+    usage: /tpa <player>
+  tpaccept:
+    description: Accept a teleport request
+    usage: /tpaccept [player]
+  tpdeny:
+    description: Deny a teleport request
+    usage: /tpdeny [player]
+  tpahere:
+    description: Request that a player teleports to you
+    usage: /tpahere <player>
+  tpacancel:
+    description: Cancel outgoing teleport requests
+    usage: /tpacancel [player]
+  tpatoggle:
+    description: Toggle incoming teleport requests
+    usage: /tpatoggle
+  waypoint:
+    description: Manage personal waypoints
+    usage: /waypoint <set|list|tp|delete> [name]
+    aliases: [wp]
+  merlinguard:
+    description: MerlinGuard admin and performance commands
+    usage: /merlinguard <status|reload>
+    aliases: [mg]
+permissions:
+  merlinguard.admin:
+    description: Access MerlinGuard administration commands
+    default: op
+  merlinguard.bypass.reach:
+    description: Bypass MerlinGuard's block interaction reach heuristic
+    default: op
